@@ -28,7 +28,7 @@ This is a functional prototype of the **Agri-Energy Connect** system built with 
 ### Clone the Repository
 ```bash
 git clone https://github.com/ObakengPitse/farming-system-project.git
-cd agri-energy-connect
+cd farming-system-project
 ```
 
 ### Database Setup
