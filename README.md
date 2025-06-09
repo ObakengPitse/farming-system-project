@@ -27,7 +27,7 @@ This is a functional prototype of the **Agri-Energy Connect** system built with 
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-repo/agri-energy-connect.git
+git clone https://github.com/ObakengPitse/farming-system-project.git
 cd agri-energy-connect
 ```
 
@@ -70,7 +70,7 @@ This will apply migrations and seed the database with sample data.
 - **Models/** - Entity classes: Farmer, Product, Employee
 - **Controllers/** - Account, Farmer, and Employee logic
 - **Views/** - Razor views for all pages
-- **Data/** - `AppDBContext.cs` database context with seed data
+- **Data/** - `AppDBContext.cs` database context with seed data, SQL Script attached.
 
 ## Notes
 - Passwords are currently stored as plaintext for demonstration. Use hashing in production (e.g., BCrypt).
@@ -81,4 +81,4 @@ This will apply migrations and seed the database with sample data.
 This prototype is for academic/demonstration purposes and not intended for production without further security and scalability enhancements.
 
 ---
-© 2025 Agri-Energy Connect
+Â© 2025 Agri-Energy Connect
