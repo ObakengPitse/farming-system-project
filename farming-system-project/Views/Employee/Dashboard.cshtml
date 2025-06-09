@@ -1,0 +1,38 @@
+﻿@model List<farming_system_project.Models.Farmer>
+
+@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Employee Dashboard</h2>
+
+    <div class="mb-4">
+        <a class="btn btn-primary me-2" asp-action="AddFarmer">Add Farmer</a>
+    </div>
+
+    <h4>Registered Farmers</h4>
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var farmer in Model)
+            {
+                <tr>
+                    <td>@farmer.Name</td>
+                    <td>@farmer.Email</td>
+                    <td>
+                        <a class="btn btn-sm btn-info" asp-action="ViewFarmerProducts" asp-route-farmerId="@farmer.Id">
+                            View Products
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

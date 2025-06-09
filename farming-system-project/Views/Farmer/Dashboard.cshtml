@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Product>
+
+<div class="container mt-4">
+    <h2 class="mb-3">My Products</h2>
+
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text"><strong>Category:</strong> @product.Category</p>
+                        <p class="card-text"><strong>Production Date:</strong> @product.ProductionDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <a href="@Url.Action("AddProduct")" class="btn btn-primary mt-3">Add New Product</a>
+</div>

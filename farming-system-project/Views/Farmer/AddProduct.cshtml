@@ -1,0 +1,20 @@
+﻿@model Product
+
+<form asp-action="AddProduct" class="container mt-4">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Product Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Product Name" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label">Category</label>
+        <input asp-for="Category" class="form-control" placeholder="Enter Category" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProductionDate" class="form-label">Production Date</label>
+        <input asp-for="ProductionDate" type="date" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Product</button>
+</form>

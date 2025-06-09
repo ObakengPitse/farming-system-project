@@ -1,0 +1,20 @@
+﻿@model Farmer
+
+<form asp-action="AddFarmer" class="container mt-4">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Farmer Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Farmer Name" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" type="email" class="form-control" placeholder="Enter Email" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">Temporary Password</label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Temporary Password" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Farmer</button>
+</form>

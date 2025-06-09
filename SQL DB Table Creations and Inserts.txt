@@ -1,0 +1,41 @@
+CREATE TABLE Farmer (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(255) NOT NULL UNIQUE,
+    Password NVARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Employee (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(255) NOT NULL UNIQUE,
+    Password NVARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Product (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(255) NOT NULL,
+    Category NVARCHAR(255) NOT NULL,
+    ProductionDate DATETIME NOT NULL,
+    FarmerId INT NOT NULL,
+    FOREIGN KEY (FarmerId) REFERENCES Farmer(Id) ON DELETE CASCADE
+);
+
+
+
+-- Insert sample data into Farmer table
+INSERT INTO Farmer (Name, Email, Password) VALUES ('John Doe', 'john@example.com', 'SecurePass123');
+INSERT INTO Farmer (Name, Email, Password) VALUES ('Jane Smith', 'jane@example.com', 'StrongPassword456');
+
+-- Insert sample data into Employee table
+INSERT INTO Employee (Name, Email, Password) VALUES ('Alice Brown', 'alice@example.com', 'EmployeePass789');
+INSERT INTO Employee (Name, Email, Password) VALUES ('Bob White', 'bob@example.com', 'SafePwd321');
+
+-- Insert sample data into Product table
+INSERT INTO Product (Name, Category, ProductionDate, FarmerId) VALUES ('Organic Apples', 'Fruit', '2025-05-01', 1);
+INSERT INTO Product (Name, Category, ProductionDate, FarmerId) VALUES ('Fresh Tomatoes', 'Vegetables', '2025-04-20', 2);
+INSERT INTO Product (Name, Category, ProductionDate, FarmerId) VALUES ('Wheat Flour', 'Grains', '2025-03-15', 1);
+INSERT INTO Product (Name, Category, ProductionDate, FarmerId) VALUES ('Dairy Milk', 'Dairy', '2025-04-10', 2);
+
+
+
