@@ -34,8 +34,9 @@ cd farming-system-project
 ### Database Setup
 1. Open the solution in Visual Studio.
 2. Replace the current database connection string with your own database connection string.
-3. Open the **Package Manager Console** (Tools > NuGet Package Manager > Package Manager Console).
-4. Run the following commands:
+3. Use the attached SQL script. 
+4. Open the **Package Manager Console** (Tools > NuGet Package Manager > Package Manager Console).
+5. Run the following commands:
 ```bash
 Update-Database
 ```
